@@ -1,0 +1,7 @@
+/* Your custom CSS styles */
+/* Override Bootstrap styles here */
+
+/* For example, to change the background color of the body */
+body {
+    background-color: rgb(199, 230, 173);
+}

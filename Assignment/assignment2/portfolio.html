@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="scriptbutton.js"></script>
+    <link rel="stylesheet" href="customstyle.css"> 
+</head>
+<body class="bg-light text-dark" class>
+    <div id="personal-info" class="container p-4">
+        <img src="images/1653572239681.jpeg" alt="Your Image" class="rounded mx-auto d-block" style="max-width: 200px; max-height: 200px;">
+        <p></p>
+        <div id="about-me">
+            <p class="lead">About Me: Highly skilled and versatile computer science master's student with a strong background in version control, programming, database management, DevOps, web technologies, and a range of tools. Adept at collaborating with cross-functional teams and delivering results in fast-paced environments.</p>
+        </div>
+        <p>Phone: 201-920-9929</p>
+        <p>Email: py98@njit.edu</p>
+        <p>Github: <a href="https://github.com/Prabhu13" target="_blank">github.com/Prabhu13</a></p>
+    </div>
+    <div class="container p-4">
+        <button onclick="toggleAboutMe()" class="btn btn-primary">Show About Me</button>
+        <button onclick="toggleAboutMe()" class="btn btn-danger">Hide About Me</button>
+    </div>
+    <div id="skills" class="container p-4">
+        <h1>Education</h1>
+        <p>MS in Computer Science, NJIT, 2023-2025</p>
+        <h1>Experience</h1>
+        <p>Software Engineer, Ingram Micro and CMA CGM, 2018-2023</p>
+        <h1>Skills</h1>
+        <p>HTML, CSS, JavaScript, Python, Web Design, Problem Solving, GCP, Data Structures, Jenkins</p>
+    </div>
+
+    <div id="contact-form" class="container p-4">
+        <h1>Contact Me</h1>
+        <form action="" method="post">
+            
+            <div id="error-messages"></div>
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" class="form-control">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="fname" class="form-control">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" cols="50" class="form-control"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
