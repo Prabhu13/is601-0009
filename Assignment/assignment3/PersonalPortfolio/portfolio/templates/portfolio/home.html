@@ -1,0 +1,11 @@
+{% extends "portfolio/base.html" %}
+
+{% block title %}Home - My Portfolio{% endblock %}
+
+{% block content %}
+    <h1>{{ name }}</h1>
+    <img src="{{ photo_url }}" alt="My Photo">
+    <p>Email: {{ email }}</p>
+    <a href="{{ github_link }}">GitHub</a>
+    <!-- Additional content specific to the home page -->
+{% endblock %}
