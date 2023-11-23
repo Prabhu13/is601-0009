@@ -9,8 +9,14 @@
     <header>
         <!-- Common header content goes here -->
     </header>
-    <div class="content">
-        {% block content %}{% endblock %}
+    <div>
+            {% if user.is_authenticated %}
+        <a href="{% url 'portfolio:logout' %}">Logout</a>
+        <div class="content"></div>
+            {% else %}
+        <a href="{% url 'portfolio:login' %}">Login</a>
+            {% endif %}
+            {% block content %}{% endblock %}
     </div>
     <footer>
         <!-- Common footer content goes here -->
