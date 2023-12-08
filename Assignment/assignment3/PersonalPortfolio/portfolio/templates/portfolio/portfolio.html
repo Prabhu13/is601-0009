@@ -1,0 +1,17 @@
+{% extends "portfolio/base.html" %}
+
+{% block title %}Portfolio - My Portfolio{% endblock %}
+
+{% block content %}
+    <h1>My Portfolio</h1>
+    <ul>
+        {% for project in projects %}
+            <li>
+                <h2>{{ project.title }}</h2>
+                <p>{{ project.description }}</p>
+                <p>Year: {{ project.year|date:"Y" }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+    <!-- Additional content specific to the portfolio page -->
+{% endblock %}

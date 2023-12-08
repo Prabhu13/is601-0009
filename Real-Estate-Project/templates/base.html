@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+        {% include 'includes/_head.html' %}
+        <title> 
+             {% block title %}  {% endblock %} Pro Real State
+        </title>
+    </head>
+<body id="top">
+
+
+
+    {% include 'includes/_header.html' %}
+
+    {% block content %}
+
+    {% endblock %}
+
+    {% include 'includes/_footer.html' %}
+
+</body>
+
+</html>
