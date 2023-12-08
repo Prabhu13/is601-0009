@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} About Us | {% endblock %}
+{% block content %}
+
+    <section id="showcase-inner" class="py-5 text-light">
+        <div class="container">
+        <div class="row text-center">
+            <div class="col-md-12">
+            <h1 class="display-4">About RealEstateSite</h1>
+            <p class="lead">At RealEstateSite, we're not just in the business of buying and selling properties; we're in the business of helping individuals and families find their dream homes. Our passion for real estate goes beyond transactions — it's about creating lasting connections and building communities.</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <section id="bc" class="mt-3">
+        <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{% url 'listing:home' %}">
+                <i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="breadcrumb-item active"> About</li>
+            </ol>
+        </nav>
+        </div>
+    </section>
+
+    <section id="about" class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>We Search For The Perfect Home</h2>
+                    <p class="lead">We have identified some of the best properties for you</p>
+                    <img src="{% static 'img/about.jpg' %}" alt="">
+                    <p class="mt-4">
+                        <strong>Why Choose Us:</strong>
+                        <br>
+                        <br>
+                        <strong>Expertise:</strong> With years of experience in the real estate market, our team of dedicated professionals possesses unparalleled expertise. We understand the nuances of the market, providing you with insightful guidance at every step.
+                        <br>
+                        <br>
+                        <strong>Personalized Service:</strong> Your journey with us is unique, and we treat it as such. Our personalized service ensures that your specific needs and preferences are met, making the buying or selling process a seamless and enjoyable experience.
+                        <br>
+                        <br>
+                        <strong>Community Focus:</strong> We believe in the power of community. Our commitment extends beyond real estate transactions to actively contributing to the growth and well-being of the neighborhoods we serve.
+                        <br>
+                        <br>
+                        <strong>Innovation:</strong> Embracing technological advancements, we leverage the latest tools and platforms to streamline processes and enhance communication, providing you with a modern and efficient real estate experience.
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+   <!-- Work -->
+<section id="work" class="bg-dark text-white text-center py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="display-4">Discover Your Dream Home</h2>
+                <h4>Explore our curated selection of exceptional properties. Your dream home is just a click away!</h4>
+                <hr>
+                <a href="{% url 'listing:listings' %}" class="btn btn-secondary text-white btn-lg">View Our Featured Listings</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Team -->
+    <section id="team" class="py-5">
+        <div class="container">
+        <h2 class="text-center">Our Team</h2>
+        <div class="row text-center">
+
+            {% for team in realtors %}
+                <div class="col-md-4">
+                <img src="{{ team.photo.url }}" alt="" class="rounded-circle mb-3">
+                <h4>{{ team.name }}</h4>
+                <p class="text-success">
+                    <i class="fas fa-award text-success mb-3"></i> Realtor</p>
+                <hr>
+                <p>
+                    <i class="fas fa-phone"></i> {{ team.phone }}</p>
+                <p>
+                    <i class="fas fa-envelope-open"></i> {{ team.email }}</p>
+                </div>
+            {% endfor %}
+
+        </div>
+        </div>
+    </section>
+
+{% endblock %}

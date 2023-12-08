@@ -1,0 +1,12 @@
+<!-- portfolio/templates/portfolio/project_form.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Add a new project</h2>
+  <form method="post" action="{% url 'listing:add_contact' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+  </form>
+{% endblock %}

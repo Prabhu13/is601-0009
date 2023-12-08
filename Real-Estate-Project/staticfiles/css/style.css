@@ -1,0 +1,149 @@
+.container {
+  background-color: #333; /* Replace with your desired dark grey color */
+  color: #fff; /* Set text color to white or another contrasting color */
+  padding: 20px; /* Add padding as needed */
+}
+
+
+.btn-secondary {
+  color: #fff;
+  background-color: #dc3545; /* Red background color */
+  border-color: #dc3545;
+}
+
+img {
+  width: 100%;
+}
+
+.logo {
+  width: 80px;
+}
+
+.navbar {
+  opacity: 0.9;
+  text-transform: uppercase;
+  background-color: #343a40; /* Dark background color */
+}
+
+.social a {
+  margin-right: 0.4rem;
+  color: #fff; /* White text color for social links */
+}
+
+#showcase {
+  position: relative;
+  min-height: 650px;
+  color: #3bb01eb4;
+  padding-top: 6rem;
+}
+#showcase .home-search {
+  min-height: 400px;
+  position: relative;
+  border-radius: 5px;
+}
+#showcase .overlay {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 400px;
+  width: 100%;
+  background: rgba(0, 123, 255, 0.8); /* Blue overlay */
+}
+#services::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  width: 100%;
+  background: rgba(134, 143, 136, 0.5); /* Adjust the opacity value (e.g., 0.5) */
+}
+
+#services {
+  min-height: 300px;
+  position: relative;
+  overflow: hidden;
+  background-color: #f8f9fa; /* Background color for the service section */
+}
+
+#services h3,
+#services p {
+  color: #343a40; /* Dark text color for the services section */
+}
+
+
+#showcase-inner {
+  background-color: #33974f; /* Dark background color */
+  position: relative;
+  overflow: hidden;
+  min-height: 200px;
+  color: #d89595;
+}
+#showcase-inner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  width: 100%;
+  background: rgba(13,110,253,.25); /* Semi-transparent black overlay */
+}
+
+#showcase-inner h1 {
+  font-size: 40px;
+  margin-top: 3rem; /* Adjust the top margin */
+}
+
+#showcase-inner.showcase-search {
+  min-height: 270px;
+}
+
+#work {
+  padding: 6rem 0;
+}
+
+.listing-preview a {
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  #showcase {
+    padding-top: 4rem;
+  }
+  #showcase h1 {
+    font-size: 40px;
+  }
+  .hide-md-down {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  #showcase {
+    padding-top: 3rem;
+  }
+  #showcase h1 {
+    font-size: 40px;
+  }
+  #showcase p {
+    display: none;
+  }
+  #top-bar {
+    text-align: center;
+  }
+  #top-bar .social {
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #showcase h1 {
+    font-size: 30px;
+  }
+ @media (max-width: 576px) {
+  #showcase-inner h1 {
+    font-size: 30px;
+  }
+}
+}

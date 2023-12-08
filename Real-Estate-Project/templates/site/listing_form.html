@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %} Add Listing | {% endblock %}
+{% block content %}
+
+<section id="add-listing" class="bg-light py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <h4>
+              <i class="fas fa-home"></i> Add Listing</h4>
+          </div>
+          <div class="card-body">
+            <form method="post" action="{% url 'listing:add-listing' %}" enctype="multipart/form-data">
+              {% csrf_token %}
+              {% for field in form %}
+                  <div class="form-group">
+                      {{ field.label_tag }}
+                      {{ field }}
+                      {% if field.errors %}
+                          {% for error in field.errors %}
+                              <div class="text-danger">{{ error }}</div>
+                          {% endfor %}
+                      {% endif %}
+                  </div>
+              {% endfor %}
+              <input type="submit" value="Add Listing" class="btn btn-secondary btn-block">
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
